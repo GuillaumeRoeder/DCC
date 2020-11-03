@@ -1,5 +1,16 @@
-python("print('Pipeline init 1111111111111111111111111111111111111111111111111')");
-python("import sys; sys.path.insert(0,r'D:\\projets\\artfx\\TD4\\py_dcc\\pipeline\\engines\\Maya\\scripts')");
 
+//python("import sys; sys.path.insert(0,r'D:\\projets\\artfx\\TD4\\py_dcc\\pipeline\\engines\\Maya\\scripts')");
+
+//python("import init_maya");
+//python("import clear");
+
+
+
+
+python("print('Start userSetup.mel in Maya')");
+$here = `whatIs userSetup`;
+// print($here);
+python("here = r'" + $here + "'.replace('Script found in: ', '')");
+python("import sys,os; sys.path.insert(0, os.path.dirname(here))");
 python("import init");
-python("import clear");
+python("print('Done import init in Maya')");

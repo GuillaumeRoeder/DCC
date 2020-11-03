@@ -11,11 +11,16 @@ import maya.mel as ml
 class MayaEngine(engine.Engine):
 
     def open(self, path):
-    	
-    	os.system(path)
-    	#cmds.loadPlugin("Mayatomr")
-    	#cmds.file(path, o=True )
+        
+        os.system(path)
+        #cmds.loadPlugin("Mayatomr")
+        #cmds.file(path, o=True )
 
+    def Alembic_export(self, path):
+
+        import subprocess 
+      #  os.system( "D:/installation/maya2019/Maya2019/bin/mayabatch.exe" + " " + "-command" +" " + "python(\"execfile('D:/projets/artfx/TD4/py_dcc/alambic_exporter/exporter.py')\");" +" "+ path +" "+ "D:/projets/artfx/TD4/py_dcc/alambic_exporter/esportABC" +" "+ "pSphere1")
+        subprocess.call(["D:/installation/maya2019/Maya2019/bin/mayabatch.exe","-command", "python(\"execfile('D:/projets/artfx/TD4/py_dcc/alambic_exporter/exporter.py')\");", path, "D:/projets/artfx/TD4/py_dcc/alambic_exporter/esportABC", "pSphere1"])
         
     def save(self, path):
         pass

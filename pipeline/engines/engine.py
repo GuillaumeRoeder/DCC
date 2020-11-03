@@ -47,10 +47,16 @@ class MyWindow(QtWidgets.QMainWindow):
 
 
         self.Open_Button.clicked.connect(self.select)
+        self.exportABC.clicked.connect(self.export)
         
     def select(self):
         fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') # , 'c:\\') #,"Image files (*.jpg *.gif)")
         self.engine.open(fname)
+
+    def export(self):
+        fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') # , 'c:\\') #,"Image files (*.jpg *.gif)")
+        self.engine.Alembic_export(fname)
+
 
         
 

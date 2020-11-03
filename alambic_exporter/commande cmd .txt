@@ -1,4 +1,0 @@
-"D:\installation\maya2019\Maya2019\bin\mayabatch.exe" -command "python(\"print("teste")\");"
-
-
-
