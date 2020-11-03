@@ -1,0 +1,4 @@
+
+MAYA_SHELF_PATH = D:/py_dcc/pipeline/engines/Maya/shelve
+MAYA_SCRIPT_PATH = D:/py_dcc/pipeline/engines/Maya/scripts
+

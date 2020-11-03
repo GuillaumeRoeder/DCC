@@ -1,0 +1,19 @@
+# RENDER ENGINES________________________________________________________________________________
+
+HOUDINI_DSO_ERROR = 2
+
+## HTOA CONFIG
+
+PATH = "C:/arnold/htoa/htoa-5.4.0_r1db094a_houdini-18.0.532/htoa-5.4.0_r1db094a_houdini-${HOUDINI_VERSION}/scripts/bin;&"
+HOUDINI_PATH = "C:/arnold/htoa/htoa-5.4.0_r1db094a_houdini-18.0.532/htoa-5.4.0_r1db094a_houdini-${HOUDINI_VERSION};&"
+
+## REDSHIFT
+
+PATH = "C:/ProgramData/Redshift/bin;$PATH"
+
+
+
+HOUDINI_TOOLBAR_PATH = D:/py_dcc/pipeline/engines/Houdini/toolbar;&
+HOUDINI_SCRIPT_PATH = D:/py_dcc/pipeline/engines/Houdini/scripts;&
+
+HOUDINI_ACCESS_METHOD = 2

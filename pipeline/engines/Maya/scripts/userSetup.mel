@@ -1,0 +1,5 @@
+python("print('Pipeline init 1111111111111111111111111111111111111111111111111')");
+python("import sys; sys.path.insert(0,r'D:\\projets\\artfx\\TD4\\py_dcc\\pipeline\\engines\\Maya\\scripts')");
+
+python("import init");
+python("import clear");
