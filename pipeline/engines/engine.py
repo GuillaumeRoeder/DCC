@@ -4,10 +4,11 @@ sys.path.append(r'D:\projets\artfx\TD4\py_dcc\Qt.py-1.3.2')
 from Qt import QtWidgets, QtCompat, QtGui
 
 
+
 ui_path = r'D:\projets\artfx\TD4\py_dcc\pipeline\ui\SaveAndOpen.ui'
 
 
-
+objectName = "pSphere1.abc"
 
 
 class Engine():
@@ -37,14 +38,10 @@ class MyWindow(QtWidgets.QMainWindow):
     
     def __init__(self):
         super(MyWindow, self).__init__()
-        #self.SelectedEngine = engine
-        #print(self.SelectedEngine)
-        self.engine = get_current()
+        self.engine = get_current()        
         
-
         # setup ui
         QtCompat.loadUi(ui_path, self)
-
 
         self.Open_Button.clicked.connect(self.select)
         self.exportABC.clicked.connect(self.export)
