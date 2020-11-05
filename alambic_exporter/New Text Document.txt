@@ -1,1 +1,0 @@
-c:\Maya2019\bin\mayabatch.exe -command "python(\"execfile('D:/WS_pipeline/script.py')\");" "/path/maya_file_name.ma" "/export_path" car_01 car_02
