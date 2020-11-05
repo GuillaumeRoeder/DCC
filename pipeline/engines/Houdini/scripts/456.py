@@ -1,16 +1,19 @@
-#import sys
+"""
+import sys
 
-#print ('starting up pipe config')
+print ('starting up pipe config')
 
 #if "\\multifct\tools\pipeline\global\packages" not in sys.path:
-#    sys.path.append("\\multifct\tools\pipeline\global\packages")
-#   sys.path.append("D:\py_dcc")
+if "D:/projets/artfx/TD4/py_dcc" not in sys.path:
 
-#from pipeline.engines import engine
+    #sys.path.append("\\multifct\tools\pipeline\global\packages")
+    sys.path.append("D:/projets/artfx/TD4/py_dcc")
 
-#print ('done pipeline config')
+from pipeline.engines import engine
 
+print ('done pipeline config')
 
+"""
 
 
 
@@ -28,8 +31,6 @@ sys.path.append(r'D:\projets\artfx\TD4\py_dcc\Qt.py-1.3.2')  # path to Qt packag
 print('Done Pipeline config')
 
 
-
-
 try:
     import hou
     node = hou.node('obj')
@@ -39,3 +40,4 @@ try:
     alembicImport.parm('buildHierarchy').pressButton()
 except:
     print("No alembic(s) found to import")
+

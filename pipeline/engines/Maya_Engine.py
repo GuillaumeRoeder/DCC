@@ -4,6 +4,7 @@ import maya.cmds as cmds
 import maya.mel as ml
 
 
+
 class MayaEngine(engine.Engine):
 
     def open(self, path):   
@@ -13,7 +14,11 @@ class MayaEngine(engine.Engine):
     def Alembic_export(self, path):
 
         import subprocess  
-        subprocess.call(["D:/installation/maya2019/Maya2019/bin/mayabatch.exe","-command", "python(\"execfile('D:/projets/artfx/TD4/py_dcc/alambic_exporter/exporterMaya.py')\");", path, "D:/projets/artfx/TD4/py_dcc/alambic_exporter/esportABC", "pSphere1"])
+        subprocess.call(["D:/installation/maya2019/Maya2019/bin/mayabatch.exe","-command", "python(\"execfile('./alambic_exporter/exporterMaya.py')\");", path, "./alambic_exporter/esportABC", engine.exportObjectName])
         
+        subprocess.call(["D:/installation/houdini_non_com/bin/hython.exe", "./alambic_exporter/create_scene.py"])
+        subprocess.call(["D:/installation/houdini_non_com/bin/hython.exe", "./save.hip", "./alambic_exporter/import_script.py"])
+        
+                
     def save(self, path):
         pass

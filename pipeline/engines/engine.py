@@ -7,16 +7,21 @@ import os
 ui_path = r'D:\projets\artfx\TD4\py_dcc\pipeline\ui\SaveAndOpen.ui'
 
 
-objectName = "pSphere1.abc" # ajouter un champ dans la fenter pour le nom de l'objet ?
-
+ # ajouter un champ dans la fenter pour le nom de l'objet ?
+exportObjectName = "pSphere1"
+exportFiletName = exportObjectName +".abc"
 
 class Engine():
     def open(self, path):
         os.system(path)
 
     def Alembic_export(self, path):
+
         import subprocess  
-        subprocess.call(["D:/installation/maya2019/Maya2019/bin/mayabatch.exe","-command", "python(\"execfile('D:/projets/artfx/TD4/py_dcc/alambic_exporter/exporterMaya.py')\");", path, "D:/projets/artfx/TD4/py_dcc/alambic_exporter/esportABC", "pSphere1"])
+        subprocess.call(["D:/installation/maya2019/Maya2019/bin/mayabatch.exe","-command", "python(\"execfile('./alambic_exporter/exporterMaya.py')\");", path, "./alambic_exporter/esportABC", engine.exportObjectName])
+        
+        subprocess.call(["D:/installation/houdini_non_com/bin/hython.exe", "./alambic_exporter/create_scene.py"])
+        subprocess.call(["D:/installation/houdini_non_com/bin/hython.exe", "./save.hip", "./alambic_exporter/import_script.py"])
         
     def save(self, path):
         pass
@@ -52,12 +57,12 @@ class MyWindow(QtWidgets.QMainWindow):
         
     def select(self):
         print(" ENGINE IN USE: {}".format(self.engine) )
-        fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') # , 'c:\\') #,"Image files (*.jpg *.gif)")
+        fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') #scene to open
         self.engine.open(fname)
 
     def export(self):
         print(" ENGINE IN USE: {}".format(self.engine) )
-        fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') # , 'c:\\') #,"Image files (*.jpg *.gif)")
+        fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') # name of the maya scene you want to export from 
         self.engine.Alembic_export(fname)
         
 

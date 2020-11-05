@@ -9,7 +9,6 @@ class HoudiniEngine(engine.Engine):
     	os.system(path)
         
 
-        pass
-
+ 
     def save(self, path):
         pass
