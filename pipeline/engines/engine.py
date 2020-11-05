@@ -8,7 +8,7 @@ from Qt import QtWidgets, QtCompat, QtGui
 ui_path = r'D:\projets\artfx\TD4\py_dcc\pipeline\ui\SaveAndOpen.ui'
 
 
-objectName = "pSphere1.abc"
+objectName = "pSphere1.abc" # ajouter un champ dans la fenter pour le nom de l'objet ?
 
 
 class Engine():
