@@ -10,7 +10,7 @@ ui_path = r'D:\projets\artfx\TD4\py_dcc\pipeline\ui\SaveAndOpen.ui'
 
 
 exportObjectName = "pSphere1"
-exportFiletName = exportObjectName +".abc"
+
 
 
 
