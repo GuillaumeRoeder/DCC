@@ -7,9 +7,12 @@ import os
 ui_path = r'D:\projets\artfx\TD4\py_dcc\pipeline\ui\SaveAndOpen.ui'
 
 
- # ajouter un champ dans la fenter pour le nom de l'objet ?
+
+
 exportObjectName = "pSphere1"
 exportFiletName = exportObjectName +".abc"
+
+
 
 class Engine():
     def open(self, path):
@@ -60,10 +63,12 @@ class MyWindow(QtWidgets.QMainWindow):
         fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') #scene to open
         self.engine.open(fname)
 
+
     def export(self):
         print(" ENGINE IN USE: {}".format(self.engine) )
         fname, __ = QtWidgets.QFileDialog.getOpenFileName(self, 'Open file') # name of the maya scene you want to export from 
         self.engine.Alembic_export(fname)
+
         
 
 
