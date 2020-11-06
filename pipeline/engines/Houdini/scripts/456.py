@@ -1,4 +1,4 @@
-"""
+
 import sys
 
 print ('starting up pipe config')
@@ -13,9 +13,9 @@ from pipeline.engines import engine
 
 print ('done pipeline config')
 
+
+
 """
-
-
 import sys
 print('Starting up Pipeline in Houdini')
 
@@ -29,16 +29,6 @@ sys.path.append(r'D:\projets\artfx\TD4\py_dcc\Qt.py-1.3.2')  # path to Qt packag
 
 print('Done Pipeline config')
 
+"""
 
 
-"""
-try:
-    import hou
-    node = hou.node('obj')
-    alembicImport = node.createNode('alembicarchive')
-    parameter = alembicImport.parm('fileName')
-    parameter.set('D:/projets/artfx/TD4/py_dcc/alambic_exporter/esportABC/pSphere1.abc')
-    alembicImport.parm('buildHierarchy').pressButton()
-except:
-    print("No alembic(s) found to import")
-"""

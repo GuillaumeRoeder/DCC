@@ -9,11 +9,6 @@ ui_path = r'D:\projets\artfx\TD4\py_dcc\pipeline\ui\SaveAndOpen.ui'
 
 
 
-exportObjectName = "pSphere1"
-
-
-
-
 class Engine():
     def open(self, path):
         os.system(path)
@@ -28,6 +23,7 @@ class Engine():
         
     def save(self, path):
         pass
+
 
 
 

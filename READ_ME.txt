@@ -5,10 +5,12 @@ to open a file click on open then on the mb or hip file inside the explorer
 
 EXPORT ABC:
 click on export ABC then select the maya scene you want to export an alambic from.
-(in this case click on maya scene_test.mb.)
-the object name is a variable in the engine.py file.
-then the ABC file is exported in the alambic_exporter/exportABC folder
+(in this case click on maya scene_Test.mb.)
+set the namespace you want to export in the  D:\projets\artfx\TD4\py_dcc\alambic_exporter\exporterMaya.py  script. 
+(change the selected_namespace variable)
+then the ABC files are exported in the alambic_exporter/exportABC folder
 
-then open a houdini scene and the alambic will be loaded from the alambic_exporter/exportABC folder when the software initializes.
+a new .hip has been created !! open the scene in houdini to see your abc files.
+
 
 
